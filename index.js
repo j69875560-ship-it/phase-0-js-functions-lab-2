@@ -1,8 +1,8 @@
-function calculateTax(amount) {
+function calculateTax( amount) {
   return amount * 0.01;
 }
-function convertToUpperCase(str) {
-  return str.toUpperCase();
+function convertToUpperCase( text) {
+  return text.toUpperCase();
 }
 function findMaximum(num1, num2) {
   if (num1 > num2) {
@@ -11,13 +11,19 @@ function findMaximum(num1, num2) {
     return num2;
   }
 }
-function isPalindrome(str) {
-  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-  return cleanedStr === cleanedStr.split("").reverse().join("");
+function isPalindrome( word) { String reversedWord = new StringBuilder(word).reverse().toString();
+    if (word === reversedWord) {
+        return true;
+    } else {
+        return false;
+    }
 }
+        
 
-function calculateDiscountedPrice(price, discount) {
-  return price - price * (discount / 100);
+
+function calculateDiscountedPrice(originalPrice, discountPercentage) {
+  let discountedPrice = originalPrice * (discountPercentage / 100);
+  return originalPrice - discountedPrice;
 }
 
 // This is required for the test to function properly
